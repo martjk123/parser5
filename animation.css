@@ -1,0 +1,324 @@
+
+
+.headMain{
+    display:none;
+    
+}
+#labelPostfix{
+    font-size:2em;
+    position:relative;
+    top:-10px;
+    color:#2b5d71;
+    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#labelPrefix{
+    font-size:2em;
+    position:relative;
+    top:-10px;
+    color:#2b5d71;
+    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+
+.enterAnimation{
+    border:2px solid blue;
+    box-shadow:10px 10px 20px blue;
+    background-color:#becbff;
+    height:100px;
+    width:300px;
+    display:none;
+    text-align:center;
+     position:fixed;
+    left:700px;
+    padding:10px;
+    border-radius:10px;
+    animation-name:ea;
+    animation-duration:5s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+    padding:20px;
+    padding-bottom:50px;
+}
+ @keyframes ea{
+    /* 0%{background-color:rgb(106, 107, 124)}
+    40%{background-color:lightblue}
+    80%{background-color:bisque} */
+} 
+
+/* /* @keyframes inputb{
+    0%{background-color:white}
+    50%{background-color:rgb(36, 31, 31)}
+} */
+
+
+.animate{
+    animation-name:input;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count:1 ;
+    animation-fill-mode: forwards;
+    animation-direction: ;
+    animation-delay: 0s;
+}
+
+@keyframes input{
+    from{
+        transform:translateX(0px);
+    }
+    to{
+        transform:translateX(-420px);
+    }
+
+}
+
+.container1{
+    display:flex;
+    justify-content:center;
+   
+}
+
+.chose{
+display:flex;
+justify-content:center;
+}
+
+#prefix{
+    margin-right:10px;
+    padding:20px;
+    background-color: #005691;
+    color:white;
+    font-weight:bold;
+    border:none;
+    border-radius:10px;
+    font-size:2em;
+    margin-top:100px;
+    animation-name:slideRight;
+    animation-duration:3s;
+    cursor:pointer;
+}
+#prefix:hover{
+    background-color:#f8b500;
+}
+
+/* @keyframes preFIX{
+    0%{background-color: #7b7f86}
+    66%{background-color:rgb(162, 158, 158)}
+    100%{background-color:}
+} */
+
+@keyframes slideRight{
+    from{
+        transform:translateX(-300px);
+    }
+
+    to{
+        transform:translateX(0);
+    }
+}
+    
+#postfix{
+    margin-right:auto;
+    padding:20px;
+    background-color: #005691;
+    color:white;
+    font-weight:bold;
+    border:none;
+    border-radius:10px;
+    font-size:2em;
+    margin-top:100px;
+    animation-name:slideLeft;
+    animation-duration: 3s;
+    cursor:pointer;
+}
+#postfix:hover{
+    background-color:#f8b500;
+    
+}
+
+@keyframes slideLeft{
+    from{
+          transform:translateX(300px);
+    }
+
+    to{
+         transform:translateX(0);
+    }
+}
+
+#step3{
+    overflow:auto;
+    height: 250px; /* Adjust height as needed */
+    overflow: auto; /* Enable scrolling */
+    border: 1px solid #ccc; /* Optional: border for visualization */
+    padding: 10px; /* Optional: add padding for better appearance */
+}
+
+
+.plus{
+
+
+	width: 80px;
+	height: 80px;
+	background: linear-gradient(to bottom, transparent 40%, blue 40%, blue 60%, transparent 60%), linear-gradient(to right, transparent 40%,blue 40%, blue 60%, transparent 60%);
+    color:red;
+    position:fixed;
+    top:400px;
+    left:500px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes plus1{
+    from{
+          transform: rotate(0);
+    }
+
+    to{
+       transform:rotate(360deg);
+    }
+}
+
+#plus2{
+
+
+	width: 80px;
+	height: 80px;
+	background: linear-gradient(to bottom, transparent 40%, blue 40%, blue 60%, transparent 60%), linear-gradient(to right, transparent 40%,blue 40%, blue 60%, transparent 60%);
+    color:red;
+    position:fixed;
+    top:100px;
+    left:1100px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    
+}
+
+#minus{
+    font-weight:bold;
+    font-size:10em;
+    color:white;
+    position:fixed;
+    top:50px;
+    left:170px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    
+}
+
+#minus2{
+    font-weight:bold;
+    font-size:10em;
+    color:blue;
+    position:fixed;
+    top:450px;
+    right:100px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    
+}
+
+#equals{
+    font-weight:bold;
+    font-size:10em;
+    color:blue;
+    position:fixed;
+    top:300px;
+    right:450px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    
+}
+
+#equals2{
+    font-weight:bold;
+    font-size:10em;
+    color:white;
+    position:fixed;
+    top:200px;
+    left:300px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    
+}
+
+
+#caret{
+    font-weight:bold;
+    font-size:10em;
+    color:white;
+    position:fixed;
+    top:50px;
+    left:600px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+#caret2{
+    font-weight:bold;
+    font-size:10em;
+    color:white;
+    position:fixed;
+    top:450px;
+    left:60px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    
+}
+
+#caret3{
+    font-weight:bold;
+    font-size:10em;
+    color:blue;
+    position:fixed;
+    bottom:0;
+    right:600px;
+    animation-name:plus1;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    
+}
+
+#labelv1{
+    margin-left:10px;
+}
+
+.animation1{
+    height: 200px;
+    width:200px;
+    background-color:bisque;
+    position:fixed;
+    top:100px;
+    left:100px;
+}
+
+
+.animation2{
+    height: 200px;
+    width:200px;
+    background-color:bisque;
+    position:fixed;
+    left:350px;
+    top:100px;
+}

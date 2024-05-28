@@ -1,0 +1,900 @@
+/* .stepsContainer{
+    background-color:rgb(110, 185, 189);
+    height:30px;
+    width:300px;
+    border-radius:10px;
+} */
+
+.stepsContainer{
+    display:flex;
+    height:120px;
+    
+}
+
+
+
+.stepsMain div{
+     padding: 60px 2px;
+     text-align:center;
+     background-color:#3e588f;
+     border-radius:10px;
+     min-width:230px;
+     scroll-snap-align: start;
+     color:white;
+     margin-top:100px;
+     font-size:1.3em;
+}
+/* @keyframes stepsb{
+    0%{background-color:rgb(175, 170, 170)}
+    50%{background-color:gray}
+} */
+
+.stepsMain{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-snap-type: x mandatory;
+    overflow-x:hidden;
+    overflow-x:scroll;
+}
+
+.stepsMain::-webkit-scrollbar{
+    display:none;
+}
+
+.headMain{
+    width:1200px;
+    margin-left:190px;
+    position:fixed;
+    bottom:50px;
+}
+
+#step3::-webkit-scrollbar{
+    display:none;
+    
+}
+
+#inputtedProb{
+    position:relative;
+    right:-30px;
+    top:50px;
+}
+
+#stackInfo{
+    position:relative;
+    top:20px;
+}
+
+
+#parenthesesInfo{
+    position:relative;
+    left:10px;
+    top:50px;
+}
+
+#resultInfo{
+    position:relative;
+    top:50px;
+    left:40px;
+}
+
+#inputtedProb{
+    position:relative;
+    left:50px;
+}
+#step1{
+   animation-name:up1;
+   animation-duration:1s;
+   animation-timing-function: ease;
+   animation-delay:0s;
+   animation-iteration-count:1;
+   
+}
+@keyframes up1{
+    from{
+       transform: translateY(-500px);
+    }
+    to{
+       transform: translateY(0);
+    }
+}
+#step1:hover{
+    
+}
+
+#step2{
+animation-name:up2;
+animation-duration:6s;
+animation-iteration-count:1;
+width:250px;
+}
+@keyframes up2{
+    from{
+       transform: translateY(-500px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+#step3{
+    animation-name:up3;
+    animation-duration:3s;
+    animation-iteration-count:1;
+    height:220px;
+    position:fixed;
+    right:100px;
+    top:80px;
+     background-color:#6c95ec;
+    width:220px;
+    border-radius:10px;
+    display:none;   
+    color:black;
+    border:2px solid rgb(100, 98, 98);
+  padding-right:30px;
+}
+@keyframes up3{
+    from{
+       transform: translateY(-500px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+td{
+    background-color:white;
+    color:black;
+    border-radius:10px;
+    width:30px;
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+#tableHere{
+    position:absolute;
+    left:100px;
+    font-size:2em;
+    font-weight:bold;
+}
+#stackWord{
+    position:absolute;
+    top:0;
+    color:rgb(20, 19, 19);
+    font-weight:bold;
+    font-size:2em;
+    left:0;
+    background-color:white;
+    padding:5px;
+    padding-right:100px;
+    padding-left:90px;
+   
+
+}
+
+
+#step4{
+    animation-name:up4;
+    animation-duration:9s;
+    animation-iteration-count:1;
+    animation-direction:linear;
+}
+@keyframes up4{
+    from{
+       transform: translateY(-500px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+#step33{
+    animation-name:upOp;
+    animation-duration:13s;
+    animation-iteration-count:1;
+    
+}
+@keyframes upOp{
+    from{
+       transform: translateY(-500px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+#step5{
+    animation-name:up5;
+    animation-duration:10s;
+    animation-iteration-count:1;
+    scroll-snap-type: Y mandatory;
+    overflow-x:hidden;
+    overflow-x:scroll;
+  
+
+}
+#step5::-webkit-scrollbar{
+    display : none;
+}
+@keyframes up5{
+    from{
+       transform: translateY(-500px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+#resultf{
+    animation-name:up6;
+    animation-duration:7s;
+    animation-iteration-count:1;
+}
+@keyframes up6{
+    from{
+       transform: translateY(-500px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+.showClick{
+    height:200px;
+    min-width:250px;
+    position:fixed;
+    right:390px;
+    top:90px;
+}
+
+/* #s1animate{
+   animation-name:s1move;
+   animation-duration:1s;
+   animation-timing-function:linear;
+   animation-direction:reverse;
+   animation-fill-mode:forwards;
+
+}
+@keyframes s1move{
+    from{
+          transform:translateY(-500px) translateX(400px);
+    }
+    to{ 
+         transform: translateY(100px) translateX();
+    }
+} */
+
+ #step1{
+
+}
+.onec{
+    animation-name:s1;
+    animation-duration:2s;
+    animation-timing-function:linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-direction:reverse;
+}
+
+@keyframes s1{
+    from{
+        transform:translateY(-500px) translateX(400px);
+    }
+    to{
+        transform:translateY(100px) translateX();
+    }
+} 
+
+
+
+.showClick div{
+    padding: 60px 2px;
+    text-align:center;
+    background-color:rgb(100, 98, 98);
+    border-radius:10px;
+    min-width:250px;
+    scroll-snap-align: start;
+    color:white;
+    margin-top:-10px; 
+   
+}
+
+#xb{
+    border-radius:10px;
+    font-size:1em;
+    background-color:red;
+    color:white;
+    border:none;
+    cursor:pointer;
+    position:absolute;
+    top:5px;
+    right:10px;
+    display:none;
+}
+
+.stepsMain{
+   display:flex;
+   gap:20px;
+   overflow-x:auto;
+   scroll-snap-type: x mandatory;
+   overflow-x:hidden;
+   overflow-x:scroll;
+}
+
+.stepsMain::-webkit-scrollbar{
+   display:none;
+}
+
+
+.tb{
+    /* background-color:red; */
+    color:white;
+   justify-content:center;
+   display:flex;
+   scroll-snap-type: x mandatory;
+    overflow-x:hidden;
+    overflow-x:scroll;
+    font-size:1;
+    font-weight:bold;
+}
+.tb::-webkit-scrollbar{
+    display:none;
+}
+
+#st1{
+animation-name:s1;
+animation-duration:3s;
+animation-direction:linear;
+
+}
+@keyframes s1{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st2{
+    animation-name:s2;
+    animation-duration:4s;
+    animation-direction:linear;
+}
+@keyframes s2{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st3{
+    animation-name:s3;
+    animation-duration:5s;
+    animation-direction:linear;
+}
+@keyframes s3{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st4{
+    animation-name:s4;
+    animation-duration:6s;
+    animation-direction:linear;
+}
+@keyframes s4{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st5{
+    animation-name:s5;
+    animation-duration:6s;
+    animation-direction:linear;
+}
+@keyframes s5{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st6{
+    animation-name:s6;
+    animation-duration:7s;
+    animation-direction:linear;
+}
+@keyframes s6{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st7{
+    animation-name:s7;
+    animation-duration:8s;
+    animation-direction:linear;
+}
+@keyframes s7{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st8{
+    animation-name:s8;
+    animation-duration:9s;
+    animation-direction:linear;
+}
+@keyframes s8{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st9{
+    animation-name:s9;
+    animation-duration:10s;
+    animation-direction:linear;
+}
+@keyframes s9{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st10{
+    animation-name:s10;
+    animation-duration:11s;
+    animation-direction:linear;
+}
+@keyframes s7{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st11{
+    animation-name:s11;
+    animation-duration:12s;
+    animation-direction:linear;
+}
+@keyframes s11{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st12{
+    animation-name:s12;
+    animation-duration:13s;
+    animation-direction:linear;
+}
+@keyframes s12{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st13{
+    animation-name:s13;
+    animation-duration:14s;
+    animation-direction:linear;
+}
+@keyframes s13{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st14{
+    animation-name:s14;
+    animation-duration:15s;
+    animation-direction:linear;
+}
+@keyframes s14{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#st15{
+    animation-name:s15;
+    animation-duration:16s;
+    animation-direction:linear;
+}
+@keyframes s15{
+    from{
+        transform:translateY(-300px);
+    }
+    to{
+        transform:translateY();
+    }
+}
+
+#step6{
+   font-size:1.5em;
+    animation-name:ans;
+    animation-duration:5s;
+    z-index:1;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    display:flex;
+    scroll-snap-type: x mandatory;
+     overflow-x:hidden;
+     overflow-x:scroll;
+     justify-content:center;
+     background-color:rgb(108, 149, 236);
+     box-shadow:10px 10px 10px rgb(80, 80, 168);
+     border:2px solid rgb(14, 54, 140);
+    }
+
+#step6::-webkit-scrollbar{
+display:none;
+}
+
+@keyframes ans{
+    from{
+         transform:translateY(-300px);
+    }
+    to{
+        transfrom:translateY(0);
+    }
+}
+#view{
+    margin-right:20px;
+}
+
+#tb1{
+    animation-name:b1;
+    animation-duration:18s;
+    animation-direction:linear
+}
+@keyframes b1{
+    from{
+        transform: translateY(-300px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+#tb2{
+    animation-name:b2;
+    animation-duration:20s;
+    animation-direction:linear
+}
+@keyframes b2{
+    from{
+        transform: translateY(-300px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+#tb3{
+    animation-name:b3;
+    animation-duration:23s;
+    animation-direction:linear
+}
+@keyframes b3{
+    from{
+        transform: translateY(-300px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+#tb4{
+    animation-name:b3;
+    animation-duration:26s;
+    animation-direction:linear
+}
+@keyframes b4{
+    from{
+        transform: translateY(-300px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+#tb5{
+    animation-name:b5;
+    animation-duration:29s;
+    animation-direction:linear
+}
+@keyframes b5{
+    from{
+        transform: translateY(-300px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+#tb6{
+    animation-name:b4;
+    animation-duration:32s;
+    animation-direction:linear;
+}
+@keyframes b4{
+    from{
+        transform: translateY(-300px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+#tb7{
+    animation-name:b5;
+    animation-duration:35s;
+    animation-direction:linear;
+}
+@keyframes b5{
+    from{
+        transform: translateY(-300px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+
+#ansPost{
+    padding: 60px 2px;
+     text-align:center;
+     background-color: #6c95ec;
+     border-radius:10px;
+     width:230px;
+     scroll-snap-align: start;
+     color:white;
+     margin-top:100px;
+     height:120px;
+     position:fixed;
+     right:80px;
+     top:-20px;
+     display:flex;
+     gap:20px;
+     overflow-x:auto;
+     scroll-snap-type: x mandatory;
+     overflow-x:hidden;
+     overflow-x:scroll;
+     display:none;
+     animation-name:postP;
+     animation-duration:2s;
+     animation-timing-function: linear;
+     border:2px solid rgb(100, 98, 98);
+     text-align:center;
+}
+#ansPost::-webkit-scrollbar{
+    display:none;
+}
+@keyframes postP{
+    from{
+        transform: translateY(-300px);
+    }
+    to{
+        transform:translateY(0);
+    }
+}
+
+#postOpAndPar{
+    position:absolute;
+    right:100px;
+    top:60px;
+}
+
+
+
+#lbS{
+    display:flex;
+    justify-content:center;
+    font-weight:bold;
+    font-size:2em;
+    position:relative;
+    top:-61px;
+   right:-10;
+    background-color:white;
+    color:black;
+    padding:10px;
+    
+    /* padding-left:100px;
+    padding-right:90px;
+    border-radius:10px;
+    margin-right:-50px; */
+}
+
+
+.x1{
+    top:100px;
+    position:fixed;
+    right:60px;
+    bottom:0;
+    background-color:yellow;
+    height:600px;
+    width:600px;
+    z-index:10;
+}
+
+#box{
+    position:absolute;
+    bottom:0;
+    top:300px;
+    left:300px;
+    background-color:rgb(157, 194, 235);
+    height:100px;
+    width:100px;
+    border:2px solid;
+    border-top:none;
+}
+
+#a{
+    font-size:2em;
+    position:absolute;
+    bottom:200px;
+    left:100px;
+    animation-name:a1;
+    animation-duration:5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes a1{
+  0%{
+    transform: translateY(0)
+  }
+  10%{
+    transform: translateY(-70px);
+  }
+  20%{
+    transform:translateX(20px);
+  }
+  30%{
+    transform:translateY()
+  }
+
+}
+
+.b2{
+    justify-content:center;
+   display:flex;
+   scroll-snap-type: x mandatory;
+    overflow-x:hidden;
+    overflow-x:scroll;
+    justify-content:center;
+}
+.b2::-webkit-scrollbar{
+    display:none;
+}
+
+
+#e{
+animation-name:em;
+animation-duration:2s;
+animation-timing-function:linear;
+position:relative;
+bottom:10px;
+font-size:1.5em;
+font-weight:bold;
+color:blue;
+}
+
+#rest{
+    position:relative;
+    top:-10px;
+    font-weight:bold;
+    animation-name:re;
+    animation-duration:2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes re{
+    0%{color:red};
+    100%{color:blue}
+}
+
+
+#x{
+
+}
+
+#p{
+
+}
+
+#r{
+
+}
+
+#e2{
+
+}
+
+#s{
+
+}
+
+#s2{
+
+}
+
+#i{
+
+}
+
+#o{
+
+}
+
+#n{
+
+}
+
+#p2{
+color:blue;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#a2{
+
+}
+
+#r2{
+
+}
+
+#s3{
+
+}
+
+#e3{
+
+}
+
+#r3{
+
+}

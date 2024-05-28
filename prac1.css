@@ -1,0 +1,321 @@
+/* body{
+    background-color:#d1cccc;
+    animation-name:bodyc;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+}
+@keyframes bodyc{
+    0%{background-color:#d1cccc}
+   
+    66%{background-color:rgb(162, 158, 158)}
+    100%{background-color:#7b7f86}
+} */
+
+body{
+    background-image:url(wave-haikei\ \(1\).png);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#navigation{
+    color:white;
+    background-color:white;
+    display:flex;
+    font-size:2em;
+    position:fixed;
+    right:0px;
+    left:0px;
+    height:50px;
+    top:0px;
+    z-index:10;
+    color:black;
+    padding-top:10px;
+    padding-left:10px;
+}
+
+#navPrefix{
+    display:none;
+}
+#tempnavp{
+    display:none;
+    font-weight:bold;
+    font-size:1.5em;
+    position:relative;
+    top:-5px;
+    color:blue;
+}
+
+#tempost{
+   display:none;
+   display:none;
+   font-weight:bold;
+   font-size:1.5em;
+   position:relative;
+   top:-5px;
+   color:blue;
+}
+
+#navPostfix{
+    display:none;
+}
+
+#guide2{
+    margin-right:auto;
+    display:none;
+    }
+
+#guide{
+margin-right:auto;
+display:none;
+}
+
+#displayGuide{
+    margin-right:auto;
+    display:none;
+    display:block;
+}
+
+#title{
+    margin-right:250px;
+    
+}
+
+.container1{
+    padding-top:100px;
+}
+
+.guideTable{
+    display:flex;
+    justify-content:center;
+    display:none;
+    position:absolute;
+}
+
+.table1{
+    background-color:white;
+}
+
+th{
+    background-color:#00203FFF;
+    color:white;
+}
+
+td{
+    background-color:rgb(102, 157, 194);
+    padding:10px;
+    color:white;
+}
+
+.opAndPaDiv{
+    display:flex;
+}
+
+#stackp{
+    display:none;
+    background-color:blue;
+    color:white;
+    padding:15px;
+    font-size:2em;
+    padding-top:20px;
+}
+
+#opAndParenthesis{
+    font-size:2em;
+    /* background-color:white; */
+    padding:15px;
+    font-size:3em;
+}
+
+#viewHere{
+    /* position:absol;
+    top:100px;
+    right:500px; */
+    display:none;
+    margin-left:100px;
+    padding-top:40px;
+}
+#stackWord{
+    padding-left:-100px;
+}
+
+#tableHere{
+    padding:10px;
+}
+
+#next{
+    display:none;
+}
+
+#stackInfo{
+    display:none;
+}
+
+#operandsInfo{
+    display:none;
+}
+
+#parenthesesInfo{
+    display:none;
+}
+
+#operatorInfo{
+    display:none;
+    margin-left:110px;
+}
+
+#resultInfo{
+    display:none;
+    margin-left:-70px;
+}
+
+#noParenthesesInfo{
+    display:none;
+}
+
+#clickPrefix{
+position:relative;
+top:10px;
+left:100px;
+padding:5px;
+padding-left:15px;
+padding-right:15px;
+background-color:rgb(70, 99, 243);
+color:white;
+font-size:1.3em;
+font-weight:bold;
+border:none;
+border-radius:5px;
+cursor:pointer;
+animation-name:ftop;
+animation-duration:2s;
+animation-direction:ease-in;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+z-index:1;
+padding-left:25px;
+padding-right:25px;
+}
+#clickPrefix:hover{
+    background-color:rgb(6, 227, 6);
+}
+@keyframes ftop{
+    from{
+        transform:translateY(-45px);
+    }
+    to{
+        transform:translateY(15px);
+    }
+}
+
+#clickPostfix{
+  display:none;
+  display:none;
+position:relative;
+top:20px;
+left:100px;
+padding:5px;
+padding-left:15px;
+padding-right:15px;
+background-color:rgb(70, 99, 243);
+color:white;
+font-size:1.3em;
+font-weight:bold;
+border:none;
+border-radius:5px;
+cursor:pointer;
+animation-name:ftop;
+animation-name:ftop;
+animation-duration:2s;
+animation-direction:ease-in;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+padding-left:25px;
+padding-right:25px;
+z-index:1;
+}
+#clickPostfix:hover{
+    background-color:rgb(6, 227, 6);
+}
+
+
+
+#labelPrefix{
+    display:block;
+    color:white;
+}
+
+#clickClear{
+
+position:relative;
+left:60px;
+top:-7px;
+background-color:rgb(235, 54, 54);
+color:white;
+font-size:1.5em;
+font-weight:bold;
+border:none;
+border-radius:5px;
+padding:5px;
+padding-right:15px;
+padding-left:15px;
+cursor:pointer;
+animation-name:clear;
+animation-duration:1s;
+animation-iteration-count:1;
+animation-timing-function:linear;
+animation-direction:normal;
+animation-fill-mode: forwards;
+animation-delay:1s;
+}
+#clickClear:hover{
+  background-color:rgb(252, 19, 19);
+}
+@keyframes clear{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(55px);
+    }
+}
+
+#enter{
+    position:relative;
+    top:10px;
+    left:-40px;
+    display:block;
+    margin-left:60px;
+    border-radius:5px;
+    border:none;
+    padding:5px;
+    z-index:2;
+    font-size:1.3em;
+    background-color:white;
+    text-align:center;
+    border:2px solid blue;
+}
+
+
+
+#labelPostfix{
+    display:block;
+    color:white;
+}
+/* 
+.container1{
+    display:none;
+} */
+
+/* #inputtedProb{
+    background-color:yellow;
+    padding:10px;
+    display:none;
+} */
+
+/* #stackInfo{
+    background-color:blue;
+    width:300px;
+    color:white;
+    padding:10px;
+} */

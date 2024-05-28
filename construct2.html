@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infix to Prefix Converter</title>
+    <link rel="stylesheet" href="prac1.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="step.css">
+    <link rel="stylesheet" href="reverse.css">
+</head>
+
+<body>
+<!--     
+    <div class="x1">
+     <div>
+        <label for="" id="box"></label>
+        <label for="" id="a">a</label>
+     </div>
+    </div> -->
+
+    <!-- <img src="icons8-addition-48.png" alt="" id="plus"> -->
+    <div class="plus"></div>
+    <div id="plus2"></div>
+    <div id="minus">&#x2212</div>
+    <div id="minus2">&#x2212</div>
+    <div id="equals">=</div>
+    <div id="equals2">=</div>
+    <div id="caret">^</div>
+    <div id="caret2">^</div>
+    <div id="caret3">^</div>
+
+    <nav id="navigation">
+        <div id="title">
+            <span id="e">E</span>
+            <label for="" id="rest">
+                <span id="x">x</span><span id="p">p</span><span id="r">r</span><span id="e2">e</span><span id="s">s</span><span id="s2">s</span><span id="i">i</span><span id="o">o</span><span id="n">n</span>
+            <span id="p2">P</span><span id="a2">a</span><span id="r2">r</span><span id="s3">s</span><span id="e3">e</span><span id="r3">r</span>
+            </label>
+        </div>
+        <!-- <div id="displayGuide" onclick="dguide()">Guide</div>
+         <div id="guide" onclick="guideClick();">Guide</div>
+         <div id="guide2" onclick="guideClick2()">Guide</div> -->
+         <div id="tempnavp">Infix to prefix </div>
+         <div id="navPrefix" onclick="prefixNav()">Infix to prefix</div>
+         <div id="tempost">Infix to postfix</div>
+         <div id="navPostfix" onclick="postfixNav()">Infix to postfix</div>
+    </nav>
+
+   
+
+<div class="container1">
+   <div class="enterAnimation">
+    <label for="" id="labelPostfix">Infix to postfix</label>
+    <label for="" id="labelPrefix">Infix to prefix</label>
+    <input type="text" id="enter" placeholder="Enter a problem" autocomplete="off">
+    <button onclick="convert();" id="clickPrefix">Prefix</button>
+    <button onclick="postFix()" id="clickPostfix">Postfix</button>
+    <button onclick="clearInfo()" id="clickClear">Clear</button>
+   </div>
+    <!-- <div id="view2"></div><br> -->
+    <div id="probContainer">
+        <!-- <div id="inputtedProb"></div> -->
+        <label id="next" onclick="next1();"></label>
+    </div>
+
+    <br>
+    <div class="opAndPaDiv">
+        <div id="opAndParenthesis"></div>
+        <div id="stackp">Stack</div>
+    </div>
+</div>
+
+
+
+<div id="operandsInfo">
+    <div id="viewOperands"></div>
+    <button onclick="next3()" id="nextb3">next</button>
+</div>
+<br>
+
+
+
+
+<br>
+
+
+
+<br><br>
+
+
+<div class="guideTable">
+<table class="table1">
+    <tr>
+        <th>OPERATOR</th>
+        <th>PRESEDENCE</th>
+        <!-- <th>ASSOCIATIVTY</th> -->
+    </tr>
+
+    <tr align="center">
+        <td>Exponentiation ( ^ )</td>
+        <td>Highest</td>
+        <!-- <td>Right Associative</td> -->
+    </tr>
+
+    <tr align="center">
+        <td>Multiplication ( * ) and Division ( / )</td>
+        <td>Second Highest</td>
+        <!-- <td>Left Associative</td> -->
+    </tr>
+
+    <tr align="center">
+        <td>Addition ( + ) and Subtraction ( - )</td>
+        <td>Lowest</td>
+        <!-- <td>Left Associative</td> -->
+    </tr>
+</table>
+
+<!-- buhatan og examples kada operators -->
+<!-- pop means clear or walaon -->
+<!-- push means padayon di siya ma clear -->
+
+
+<div class="divsamples1">
+    <table id="table2">
+        <label for="">Prefix</label>
+        <tr align="center">
+            <!-- Infix to Postfix -->
+            <th>Problem</th>
+            <th>Operands</th>
+            <th>Operator</th>
+            <th>Result</th>
+        </tr>
+
+        <tr align="center">
+            <td>a + b</td>
+            <td>a b</td>
+            <td>+</td>
+            <td>+ a b</td>
+        </tr>
+    </table>
+</div>
+
+<div class="divsamples2">
+
+
+</div>
+</div>
+<!-- <button id="">Postfix</button> -->
+
+<div class="chose">
+   <div>
+    <button id="prefix" onclick="toPrefix();">Infix to Prefix</button>
+   </div>
+   <div>
+    <button id="postfix" onclick="toPostfix();">Infix to Postfix</button>
+   </div>
+</div>
+
+<!-- steps --> 
+<div class="headMain">
+    <div class="stepsMain">
+    <label id="s1animate" onclick="moveS1animate()">
+        <div id="step1" class="stepsContainer"> <label id="inputtedProb"></label></div>
+    </label>
+
+
+
+
+        <div class="stepsContainer" id="st1">
+            <table id="t1" class="tb">
+                <!-- <th>D1</th> -->
+                <tr>
+                    <td id="td1"></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer"id="st2">
+            <table id="t2" class="tb">
+                <!-- <th>D2</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st3">
+            <table id="t3" class="tb">
+                <!-- <th>D3</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st4">
+            <table id="t4" class="tb">
+                <!-- <th>D4</th> -->
+                <tr>
+                    <td id="td4"></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st5">
+            <table id="t5" class="tb">
+                <!-- <th>D5</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st6">
+            <table id="t6" class="tb">
+                <!-- <th>D6</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+     
+        <div class="stepsContainer" id="st7">
+            <table id="t7" class="tb">
+                <!-- <th>D7</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st8">
+            <table id="t8" class="tb">
+                <!-- <th>D8</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st9">
+            <table id="t9" class="tb">
+                <!-- <th>D9</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st10">
+            <table id="t10" class="tb">
+                <!-- <th>D10</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st11">
+            <table id="t11" class="tb">
+                <!-- <th>D11</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st12">
+            <table id="t12" class="tb">
+                <!-- <th>D12</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st13">
+            <table id="t13" class="tb">
+                <!-- <th>D13</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer" id="st14">
+            <table id="t4" class="tb">
+                <!-- <th>D14</th> -->
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="stepsContainer"id="st15">
+            <table id="t15" class="tb">
+                <!-- <th>D15</th> -->
+                <tr>
+                    <td id="td15"></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div id="step4" class="stepsContainer" onclick="moveS4animate()">
+            <label id="parenthesesInfo">
+                <label id="parenthesis"></label><br>
+            </label><br>
+        </div >
+
+        
+        <div id="step2" class="stepsContainer" onclick="moveS2animate()">
+            <label id="stackInfo">
+            <label for="" id="infoStack">Operators are now stored on the Stack
+                Whoever goes first <br> or near the stack, is last</label><br>
+        </div>
+        
+      
+        <div id="step5" class="stepsContainer" onclick="moveS5animate()">
+            <label id="operatorInfo">
+                <label id="noParenthesesInfo">
+                    <table id="noParentheses"></table>
+                </label>
+                <label>
+                    Stack
+                </label>
+                <label id="op1"></label><br>
+            
+                <button onclick="next5()" id="nextb5" ></button>
+            </label>
+        </div>
+
+        <div class="stepsContainer" id="step33">
+            <label for="" id="upOperands" class="b2"></label>
+        </div>
+
+
+
+       <div class="stepsContainer" id="tb1">
+        <table id="table11" class="b2">
+            <!-- <th>Data1</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </label><br>
+       </div>
+
+       <div class="stepsContainer" id="tb2">
+       <table id="table12" class="b2">
+        <!-- <th>Data2</th> -->
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+       </div>
+
+
+       <div class="stepsContainer" id="tb3">
+        <table id="table13" class="b2">
+            <!-- <th>Data3</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+       </div>
+
+       <div class="container" id="tb4">
+        <table id="table14" class="b2">
+            <!-- <th>Data4</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb5">
+        <table id="table15" class="b2">
+            <!-- <th>Data5</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb6">
+        <table id="table16" class="b2">
+            <!-- <th>Data6</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb7">
+        <table id="table17" class="b2">
+            <!-- <th>Data7</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb8">
+        <table id="table18" class="b2">
+            <!-- <th>Data8</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb9">
+        <table id="table19" class="b2">
+            <!-- <th>Data9</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb10">
+        <table id="table20" class="b2">
+            <!-- <th>Data10</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb11">
+        <table id="table21" class="b2">
+            <!-- <th>Data11</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb12">
+        <table id="table22" class="b2">
+            <!-- <th>Data12</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb13">
+        <table id="table23" class="b2">
+            <!-- <th>Data13</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb14">
+        <table id="table24" class="b2">
+            <!-- <th>Data14</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" id="tb15">
+        <table id="table25" class="b2">
+            <!-- <th>Data15</th> -->
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div id="step6" class="stepsContainer">
+        <label id="resultInfo">
+            <label for="" id="labelv1">Prefix Expression</label><br>
+            <label id="view"></label>
+        </label>
+    </div>
+    </div>
+</div>
+
+
+
+<div id="step3" class="stepsContainer" onclick="moveS3animate()">      
+    <label id="viewHere">
+        <table id="tableHere">
+            <!-- <th>Operators and Parentheses</th> -->
+        </table>
+        <label id="stackWord">Stack</label>
+    </label>
+            </div>
+
+<!-- highlight card pag tuplok -->
+<div class="showClick">
+    <label id="showingClick"></label>
+    <!-- <button id="xb" onclick="cancel()">X</button> -->
+</div>
+
+<div id="ansPost">
+    <label for="" id="lbS">Stack</label>
+    <table id="postOpAndPar">
+    </table>
+</div>
+
+
+
+<!-- reverse -->
+<div class="reverse">
+    <!-- <label id="revLabel">Reverse</label> -->
+    <input type="text" id="enter2" placeholder="Enter prefix expression">
+    <button onclick="prefixRev()" id="revPre">Prefix to infix</button>
+    <button onclick="postfixRev()" id="revPost">Postfix to Infix</button>
+    <h1 id="revResult"></h1>
+    <h1 id="revResult2"></h1>
+</div>
+
+<div class="circle"></div>
+
+<div class="circle2"></div>
+
+<div class="circle3"></div>
+
+<div class="circle4"></div>
+
+<div class="circle5"></div>
+
+<!-- <div class="circle6"></div> -->
+
+<img src="icons8-synchronize-64.png" alt="" id="logorev" onclick="revl();">
+
+<img src="icons8-back-50.png" alt="" class="back" onclick="backb()"> 
+<!-- <h1 class="back" onclick="backb()">back</h1> -->
+
+<!-- <div class="animation1">
+<div>
+
+</div>
+</div>
+
+<div class="animation2">
+    <div>
+    
+    </div>
+    </div>     -->
+
+    <script src="calculate.js">
+    </script>
+</body>
+</html>
